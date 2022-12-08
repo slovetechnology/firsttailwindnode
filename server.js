@@ -14,7 +14,7 @@ mongoose.connect(uri, () => {
 })
 
 app.use(cors({
-    origin: ['http://localhost:3000']
+    origin: ['https://firsttailwind.onrender.com']
 }))
 app.use(express.json())
 app.use('/api/todo', TodoRouter)
