@@ -31,7 +31,7 @@ exports.updateTodo = async(req, res) => {
 }
 exports.alltodo = async(req, res) => {
     try {
-        const todos = await Todo.find().sort({createdAt: -1})
+        const todos = await Todo.find().sort({updatedAt: -1})
         res.json({status: 200, msg: todos})
     } catch (error) {
         res.json({status: 404, msg: 'No todo found'})
