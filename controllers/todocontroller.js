@@ -8,7 +8,7 @@ exports.savetodo = async(req, res) => {
         .then(() => {
             res.json({status: 200, msg: 'Todo Saved'})
         })
-        .catch(() => res.json({status: 400, msg: 'Todo Not Saved'}))
+        .catch((err) => res.json({status: 400, msg: `Todo Not Saved ${err}`}))
     } catch (error) {
         res.json({satus: 400, msg: `Error ${error}`})
     }
