@@ -8,7 +8,7 @@ exports.savetodo = async(req, res) => {
         .then(() => {
             res.json({status: 200, msg: 'Todo Saved'})
         })
-        .catch((err) => res.json({status: 400, msg: `Todo Not Saved ${err}`}))
+        .catch((err) => res.json({status: 400, msg: `Todo Not Saved, Fill in field correctly`}))
     } catch (error) {
         res.json({satus: 400, msg: `Error ${error}`})
     }
@@ -23,7 +23,7 @@ exports.updateTodo = async(req, res) => {
             .then(() => {
                 res.json({status: 200, msg: 'Todo Updated'})
             })
-            .catch(() => res.json({status: 400, msg: 'Todo Not Saved'}))
+            .catch(() => res.json({status: 400, msg: 'Todo Not Saved, Fill in field correctly'}))
         });
     } catch (error) {
         res.json({satus: 400, msg: `Error ${error}`})
